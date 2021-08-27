@@ -9,7 +9,6 @@ export const GET_WEATHER_QUERY = gql`
 				summary {
 					title
 					description
-					icon
 				}
 				temperature {
 					actual
@@ -21,12 +20,6 @@ export const GET_WEATHER_QUERY = gql`
 					speed
 					deg
 				}
-				clouds {
-					all
-					visibility
-					humidity
-				}
-				timestamp
 			}
 		}
 	}
