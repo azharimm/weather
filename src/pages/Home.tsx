@@ -15,12 +15,12 @@ const Home = () => {
 			variables: { name: c },
 		});
 	};
-	if (error) return <h1>Error found</h1>;
 	return (
-		<div className="home">
-			<h1>Search for Weather</h1>
+		<div className="container mx-auto">
+			<h1 className="text-center text-2xl mt-5">Search for Weather</h1>
 			<Search handleSubmit={(e, city) => handleSubmit(e, city)} city={city} setCity={setCity} />
-			{ loading && <div>Loading...</div>}
+			{ loading && <div className="mx-auto text-center mt-5">Loading...</div>}
+			{ error && <div className="mx-auto text-center mt-5">Oops! Something went wrong!</div>}
 			{data?.getCityByName && (
 				<Weather data={data.getCityByName} />
 			)}

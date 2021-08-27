@@ -9,6 +9,7 @@ export const GET_WEATHER_QUERY = gql`
 				summary {
 					title
 					description
+					icon
 				}
 				temperature {
 					actual
@@ -19,6 +20,10 @@ export const GET_WEATHER_QUERY = gql`
 				wind {
 					speed
 					deg
+				}
+				clouds {
+					visibility
+					humidity
 				}
 			}
 		}
