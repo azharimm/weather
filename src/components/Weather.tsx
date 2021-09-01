@@ -5,13 +5,14 @@ export type Props = {
 };
 
 const Weather: React.FC<Props> = ({ data }) => {
+	let currentdate = new Date().toISOString().slice(0, 10);
 	return (
 		<div className="weather">
 			<div className="mt-6 flex items-center justify-center ">
 				<div className="flex flex-col bg-white p-4 w-full max-w-xs rounded-lg border-2">
 					<div className="font-bold text-xl">{data.name}</div>
 					<div className="text-sm text-gray-500">
-						Thursday 10 May 2020
+						{currentdate}
 					</div>
 					<div className="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
 						<img src={`http://openweathermap.org/img/w/${data.weather.summary.icon}.png`} alt="" />
